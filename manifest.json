@@ -1,0 +1,33 @@
+{
+  "name": "Google Forms Copier",
+  "description": "Copies answers from one Google Form and fills them into another.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://docs.google.com/forms/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/forms/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_title": "Copy Google Form Answers",
+    "default_popup": "popup.html"
+  }
+}

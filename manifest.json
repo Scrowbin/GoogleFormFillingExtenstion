@@ -1,13 +1,12 @@
 {
-  "name": "Google Forms Copier",
-  "description": "Copies answers from one Google Form and fills them into another.",
+  "name": "Form Response Reuse Helper",
+  "description": "Helps users reuse their own Google Form responses by manually extracting and re-filling form data to reduce repetitive data entry.",
   "version": "1.0.0",
   "manifest_version": 3,
 
   "permissions": [
     "storage",
-    "tabs",
-    "scripting"
+    "tabs"
   ],
 
   "host_permissions": [
@@ -27,7 +26,7 @@
   },
   
   "action": {
-    "default_title": "Copy Google Form Answers",
+    "default_title": "Form Response Helper",
     "default_popup": "popup.html"
   }
 }
